@@ -9,7 +9,7 @@ class CuentaBancaria
         @vip = vip
     end    
     
-    def cuenta_numero
+    def numero_de_cuenta
         if vip != 0 
             puts "1-#{numero_cuenta}"
         else
@@ -18,6 +18,6 @@ class CuentaBancaria
     end
 end
 
-cuenta_cliente = CuentaBancaria.new("Juanito",87654321,999)
+cuenta_cliente = CuentaBancaria.new(["Juanito","Pepita"].sample,Random.rand(8888..99999999),Random.rand(0..1))
 puts cuenta_cliente.nombre_cliente
-puts cuenta_cliente.cuenta_numero
+puts cuenta_cliente.numero_de_cuenta
