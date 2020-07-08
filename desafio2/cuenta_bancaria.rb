@@ -14,6 +14,6 @@ class CuentaBancaria
 end
 
 cuenta1 = CuentaBancaria.new("banco1",12345, 5000)
-cuenta2 = CuentaBancaria.new("banco2",54321, 3000)
+cuenta2 = CuentaBancaria.new("banco2",54321, 5000)
 
-cuenta1.transferir(4000,cuenta2)
+cuenta1.transferir(5000,cuenta2)

@@ -6,7 +6,7 @@ class Usuario
     @cuentas = cuentas
   end
   def saldo_total
-    puts @cuentas.map { |cuenta| cuenta.saldo }.sum
+    puts cuentas.map { |cuenta| cuenta.saldo }.sum
 end
 end
 
