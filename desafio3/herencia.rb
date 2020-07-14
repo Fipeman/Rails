@@ -11,7 +11,7 @@ end
 class MonthlyAppointment < Appointment
   attr_accessor :day
   def initialize(location, purpose, hour, min, day)
-    super(location, purpose, hour, min, day)
+    super(location, purpose, hour, min)
     @day = day
   end
 
@@ -37,7 +37,7 @@ end
 class OneTimeAppointment < Appointment
   attr_accessor :day, :month, :year
   def initialize (location, purpose, hour, min, day, month, year)
-    super(location, purpose, hour, min, day, month, year)
+    super(location, purpose, hour, min)
     @day = day
     @month = month
     @year = year
