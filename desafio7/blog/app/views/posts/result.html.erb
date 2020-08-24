@@ -1,0 +1,12 @@
+<br>  
+<br>
+<br>  
+
+<div class="container text-center">  
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-info">
+      <%= msg %>
+    </div>
+    <%end%>
+    <h3><%= link_to 'Home', posts_index_path%></h3><h3><%= link_to 'New', posts_new_path%></h3>
+</div>    

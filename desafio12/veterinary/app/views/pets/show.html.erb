@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pet.name %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @pet.breed %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @pet.birthdate %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Weigth</th>
+      <th>Heigth</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pet_histories.each do |pet_history| %></td>
+      <tr>
+        <td><%= pet_history.weigth %></td>
+        <td><%= pet_history.height %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Weigth Average</th>
+      <th>Heigth Average</th>
+      <th>Weigth Max</th>
+      <th>Heigth Max</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @pet_average_weigth %></td>
+        <td><%= @pet_average_heigth %></td>
+        <td><%= @pet_max_weigth %></td>
+        <td><%= @pet_max_heigth %></td>
+      </tr>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>
